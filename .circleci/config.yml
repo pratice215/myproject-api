@@ -33,10 +33,10 @@ jobs:
           paths:
             - ~/.cache/yarn
       - run:
-          name: Test
+          name: Test # Remove this section if you do not have tests
           command: yarn test:all
       - run:
-          name: Check linting
+          name: Check linting # Remove this section if you do not have linting
           command: yarn run lint
       - persist_to_workspace:
           root: .
@@ -49,7 +49,7 @@ jobs:
     steps:
       - add_ssh_keys:
             fingerprints:
-              - "0c:0c:7b:fc:7d:4a:7a:91:5a:53:e0:d4:0f:e4:7e:83" # EDIT this with the SSH key fingerprint from circleci seettings
+              - "eb:27:e9:00:a6:87:73:58:ff:af:e0:39:ea:e2:29:04" # EDIT this with the SSH key fingerprint from circleci seettings
       - attach_workspace:
           at: .
       - run:
@@ -104,7 +104,7 @@ jobs:
             mkdir -p ~/.ssh
             ssh-keyscan github.com >> ~/.ssh/known_hosts
             ssh-add -D
-            ssh-add ~/.ssh/id_rsa_0c0c7bfc7d4a7a915a53e0d40fe47e83 # EDIT this with the SSH key fingerprint from circleci seettings (without columns)
+            ssh-add ~/.ssh/id_rsa_eb27e900a6877358ffafe039eae22904 # EDIT this with the SSH key fingerprint from circleci seettings (without columns)
             git clone git@github.com:$GITOPS_REPO_OWNER/$GITOPS_REPO.git
             cd $GITOPS_REPO
             git config user.email "git@circleci.com"
