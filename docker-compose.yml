@@ -1,0 +1,19 @@
+version: '3.7'
+volumes:
+  redis-data:
+
+services:
+  redis:
+    restart: on-failure
+    image: redis:6.2-alpine
+    volumes:
+      - redis-data:/data
+
+  api:
+    build: ./
+    environment:
+      EXPRESS_PORT: 4000
+    volumes:
+      - ./:/app
+    ports:
+      - "4000:4000"

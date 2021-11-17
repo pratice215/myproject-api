@@ -1,0 +1,28 @@
+{
+  "name": "myproject-api",
+  "version": "1.0.0",
+  "description": "Sample backend using express and tonoid/helpers",
+  "private": true,
+  "type": "module",
+  "author": "Simo Elalj <simo@tonoid.com>",
+  "scripts": {
+    "start": "node --experimental-modules index.js",
+    "inspect": "node --experimental-modules --inspect=0.0.0.0 index.js",
+    "lint": "eslint --fix --ext js .",
+    "test": "exit 0",
+    "runAction": "node --experimental-modules ./tasks/runAction.js",
+    "test:all": "exit 0"
+  },
+  "dependencies": {
+    "@tonoid/express": "0.0.16",
+    "@tonoid/helpers": "0.0.5",
+    "@tonoid/logger": "0.0.3",
+    "@tonoid/redis": "0.0.3",
+    "dotenv": "10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "8.2.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.25.3"
+  }
+}
