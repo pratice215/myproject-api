@@ -15,5 +15,5 @@ dotenv.config();
 
   const lastDate = await ctx.redis.getValue('lastDate');
   await ctx.redis.setValue('lastDate', new Date().toISOString());
-  logger.info(`lastDate: ${lastDate}`);
+  ctx.logger.info(`lastDate: ${lastDate}`);
 })();
