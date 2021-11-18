@@ -2,7 +2,7 @@
   "name": "myproject-api",
   "version": "1.0.0",
   "description": "Sample backend using express and tonoid/helpers",
-  "private": true,
+  "license": "MIT",
   "type": "module",
   "author": "Simo Elalj <simo@tonoid.com>",
   "scripts": {
@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "@tonoid/express": "0.0.16",
-    "@tonoid/helpers": "0.0.5",
-    "@tonoid/logger": "0.0.3",
+    "@tonoid/helpers": "0.0.6",
+    "@tonoid/logger": "0.0.4",
     "@tonoid/redis": "0.0.3",
     "dotenv": "10.0.0"
   },

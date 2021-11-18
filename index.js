@@ -14,6 +14,7 @@ dotenv.config();
   await init([
     redis(),
     express({
+      jsonLog: false,
       endpoints: [
         {
           path: '/',
@@ -21,5 +22,12 @@ dotenv.config();
         },
       ],
     }),
-  ], { logger });
+  ], {
+    logger,
+    loggerOptions: {
+      json: false,
+      colorize: true,
+      simple: true,
+    },
+  });
 })();

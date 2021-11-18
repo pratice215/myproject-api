@@ -52,15 +52,15 @@
     express-winston "4.2.0"
     winston "3.3.3"
 
-"@tonoid/helpers@0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@tonoid/helpers/-/helpers-0.0.5.tgz#05a9ec26eaca09dfaed2f3f56fa53fc2645e27fb"
-  integrity sha512-EOvxxxyGx9PQF7XtgEeJwDEbQRd6e1/zoip5eVrXJFiLKjxNyvAzJvs4UxFTh3vpmkWuc5U17aOhRuTtZ4Ovjg==
+"@tonoid/helpers@0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@tonoid/helpers/-/helpers-0.0.6.tgz#709a5f457a044741524a90715d81df5506e193cc"
+  integrity sha512-OBQAlrBbc0gSoFPGA8bU1yDabyF+PXRaWR5DorgV0PBeTrwfFwwPu/KlOp+qUhfeA5+1+O/Z5JAUXrq4JOlYRw==
 
-"@tonoid/logger@0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@tonoid/logger/-/logger-0.0.3.tgz#23afb7329875bc602793adce3dbfa49672327e20"
-  integrity sha512-1PVT25xVqGDNwtjYhfgYdE5VbvjZ6nkIIl/uKWXKzuHvNUR3MgHqi7IEz3HUNOCwa+xGtmAekR4V7vDkMs6/rQ==
+"@tonoid/logger@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@tonoid/logger/-/logger-0.0.4.tgz#5a13b1dfdf6c39a5c86583d790c828664787211d"
+  integrity sha512-s5R/YWMkV5zQloFU4lY4IESfBLheq/1LKJ+KKr0Zvc91rvPPYpvM+yiPiKlpJFgVz/D8YIuf5A3yCHvy+aW5CA==
   dependencies:
     winston "3.3.3"
 
