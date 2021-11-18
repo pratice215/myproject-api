@@ -17,7 +17,7 @@ dotenv.config();
       jsonLog: false,
       endpoints: [
         {
-          path: '/',
+          path: '/api',
           handler: apiRoot,
         },
       ],
