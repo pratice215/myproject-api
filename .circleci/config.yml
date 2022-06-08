@@ -49,7 +49,7 @@ jobs:
     steps:
       - add_ssh_keys:
             fingerprints:
-              - "eb:27:e9:00:a6:87:73:58:ff:af:e0:39:ea:e2:29:04" # EDIT this with the SSH key fingerprint from circleci seettings
+              - "quEv0ZzxW/3E1J5VKuhBys23VxGMbAsoZO2Prko45CY" # EDIT this with the SSH key fingerprint from circleci seettings
       - attach_workspace:
           at: .
       - run:
@@ -68,10 +68,10 @@ jobs:
           name: Check required environment variables
           command: |
             required_env=(
-              "DOCKERHUB_USERNAME"
-              "DOCKERHUB_PASSWORD"
-              "GITOPS_REPO"
-              "GITOPS_REPO_OWNER"
+              "amandeep31"
+              "1m@thebest"
+              "gitops-sample"
+              "pratice215"
               "ENV"
               "IMAGE_TAG"
             )
@@ -104,7 +104,7 @@ jobs:
             mkdir -p ~/.ssh
             ssh-keyscan github.com >> ~/.ssh/known_hosts
             ssh-add -D
-            ssh-add ~/.ssh/id_rsa_eb27e900a6877358ffafe039eae22904 # EDIT this with the SSH key fingerprint from circleci seettings (without columns)
+            ssh-add ~/.ssh/id_rsa_quEv0ZzxW/3E1J5VKuhBys23VxGMbAsoZO2Prko45CY # EDIT this with the SSH key fingerprint from circleci seettings (without columns)
             git clone git@github.com:$GITOPS_REPO_OWNER/$GITOPS_REPO.git
             cd $GITOPS_REPO
             git config user.email "git@circleci.com"
@@ -115,4 +115,4 @@ jobs:
             git add -f ./charts/app/${REPO_NAME}/values-$ENV.yaml
             git add -f ./charts/tasks/values-$ENV.yaml
             git commit -m "CircleCI update $IMAGE_TAG"
-            git push -u origin master
+            git push -u origin maste
