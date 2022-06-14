@@ -50,7 +50,7 @@ jobs:
     steps:
       - add_ssh_keys:
             fingerprints:
-              - "e5:75:a9:e7:cf:bc:d2:1d:98:2a:93:16:a6:99:90:8" # EDIT this with the SSH key fingerprint from circleci seettings
+              - "18:5a:2f:02:27:6c:da:93:88:07:b4:c1:c1:8c:fd:cc" # EDIT this with the SSH key fingerprint from circleci seettings
       - attach_workspace:
           at: .
       - run:
@@ -107,7 +107,7 @@ jobs:
             ssh-keyscan github.com >> ~/.ssh/known_hosts
             ssh-add -D
             cat ~/.ssh/known_hosts
-            ssh-add ~/.ssh/id_rsa_e575a9e7cfbcd21d982a9316a699908 # EDIT this with the SSH key fingerprint from circleci settings (without columns)
+            ssh-add ~/.ssh/id_rsa_185a2f02276cda938807b4c1c18cfdcc # EDIT this with the SSH key fingerprint from circleci settings (without columns)
             git clone git@github.com:pratice215/myproject-api.git
             cd myproject-api
             git config user.email "git@circleci.com"
