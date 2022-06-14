@@ -108,14 +108,14 @@ jobs:
             ssh-add -D
             cat ~/.ssh/known_hosts
             ssh-add ~/.ssh/id_rsa_quEv0ZzxW/e575a9e7cfbcd21d982a9316a699908c # EDIT this with the SSH key fingerprint from circleci settings (without columns)
-           git clone git@github.com:$GITOPS_REPO_OWNER/$GITOPS_REPO.git
+            git clone git@github.com:$GITOPS_REPO_OWNER/$GITOPS_REPO.git
             cd $GITOPS_REPO
             git config user.email "git@circleci.com"
-           git config user.name "CircleCI"
-           sed -i -e "s|tag:.*|tag: \"$IMAGE_TAG\" # $(date -u +'%Y-%m-%dT%H:%M:%SZ') $CIRCLE_BUILD_URL|" ./charts/app/${REPO_NAME}/values-$ENV.yaml
+            git config user.name "CircleCI"
+            sed -i -e "s|tag:.*|tag: \"$IMAGE_TAG\" # $(date -u +'%Y-%m-%dT%H:%M:%SZ') $CIRCLE_BUILD_URL|" ./charts/app/${REPO_NAME}/values-$ENV.yaml
             sed -i -e "s|$REPO_NAME:$ENV-.*|$REPO_NAME:$IMAGE_TAG # $(date -u +'%Y-%m-%dT%H:%M:%SZ') $CIRCLE_BUILD_URL|" ./charts/tasks/values-$ENV.yaml
-           cat ./charts/app/${REPO_NAME}/values-$ENV.yaml
-             git add -f ./charts/tasks/values-$ENV.yaml
-           git commit -m "CircleCI update $IMAGE_TAG"
+            cat ./charts/app/${REPO_NAME}/values-$ENV.yaml
+            git add -f ./charts/tasks/values-$ENV.yaml
+            git commit -m "CircleCI update $IMAGE_TAG"
             git push -u origin master 
  
