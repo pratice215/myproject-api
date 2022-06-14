@@ -107,7 +107,7 @@ jobs:
             ssh-keyscan github.com >> ~/.ssh/known_hosts
             ssh-add -D
             cat ~/.ssh/known_hosts
-            ssh-add ~/.ssh/id_rsa_quEv0ZzxW/e575a9e7cfbcd21d982a9316a699908c # EDIT this with the SSH key fingerprint from circleci settings (without columns)
+            ssh-add ~/.ssh/id_rsa_e575a9e7cfbcd21d982a9316a699908c # EDIT this with the SSH key fingerprint from circleci settings (without columns)
             git clone git@github.com:$GITOPS_REPO_OWNER/$GITOPS_REPO.git
             cd $GITOPS_REPO
             git config user.email "git@circleci.com"
