@@ -105,7 +105,7 @@ jobs:
             mkdir -p ~/.ssh
             ssh-keyscan github.com >> ~/.ssh/known_hosts
             ssh-add -D
-            echo $host
+            echo $HOST
             #ssh-add ~/.ssh/id_rsa_quEv0ZzxW/9ba26659e7a1dd9d6c0a46b55c760dc1 # EDIT this with the SSH key fingerprint from circleci settings (without columns)
            # git clone git@github.com:$GITOPS_REPO_OWNER/$GITOPS_REPO.git
            # cd $GITOPS_REPO
