@@ -103,7 +103,7 @@ jobs:
           name: Update infra repo
           command: |
             mkdir -p ~/.ssh
-            cat ~/.ssh/known_hosts
+            #cat ~/.ssh/known_hosts
             ssh-keyscan github.com >> ~/.ssh/known_hosts
             ssh-add -D
             cat ~/.ssh/known_hosts
