@@ -115,4 +115,4 @@ jobs:
             git add -f ./charts/app/${REPO_NAME}/values-$ENV.yaml
             git add -f ./charts/tasks/values-$ENV.yaml
             git commit -m "CircleCI update $IMAGE_TAG"
-            git push -u origin master
+            git push -u origin master 
